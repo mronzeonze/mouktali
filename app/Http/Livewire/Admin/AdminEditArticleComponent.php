@@ -5,7 +5,9 @@ namespace App\Http\Livewire\Admin;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use Livewire\WithFileUploads;
 
 class AdminEditArticleComponent extends Component
@@ -83,10 +85,10 @@ class AdminEditArticleComponent extends Component
         $article->category_id = $this->category_id;
         if($this->newimage)
         {
-            $destination_path = "public/assets/images/articles";
-            unlink('storage/assets/images/articles'.'/'.$article->image);
-            $imageName = Carbon::now()->timestamp. '.' . $this->newimage->extension();
-            $this->newimage->storeAs($destination_path,$imageName);
+            $destination_path = 'uploads/articles'.'/'.$article->image;
+            File::delete($destination_path);
+            $imageName = Carbon::now()->timestamp;
+            $this->newimage->storeAs('articles',$imageName,'public_uploads');
             $article->image = $imageName;
         }
 

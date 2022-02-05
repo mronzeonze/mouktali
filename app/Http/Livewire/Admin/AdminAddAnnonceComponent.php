@@ -41,9 +41,8 @@ class AdminAddAnnonceComponent extends Component
         $annonce->url = $this->url;
         $annonce->status = $this->status;
         $annonce->location = $this->location;
-        $destination_path = "public/assets/images/annonces";
-        $imageName = Carbon::now()->timestamp. '.' . $this->image->extension();
-        $this->image->storeAs($destination_path,$imageName);
+        $imageName = Carbon::now()->timestamp;
+        $this->image->storeAs('annonces',$imageName,'public_uploads');
         $annonce->image = $imageName;
 
         $annonce->save();

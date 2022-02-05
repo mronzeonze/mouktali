@@ -146,7 +146,7 @@
                             <tr>
                                 <td><input type="checkbox" {{($article->featured)?'checked="true"':''}} wire:click="featured({{$article->id}})"></td>
                                 <td>{{$article->id}}</td>
-                                <td><img src="{{asset('storage/assets/images/articles')}}/{{$article->image}}" width="60"/></td>
+                                <td><img src="{{asset('uploads/articles')}}/{{$article->image}}" width="60"/></td>
                                 <td class="text-justify">{{$article->title}}</td>
                                 <td class="text-justify">{{substr($article->description,0,400)}} <a href="#expand{{$article->id}}" data-toggle="modal"> Développer</a></td>
                                 <td>{{$article->category->title}}</td>
@@ -167,7 +167,7 @@
                                         <div class="modal-body text-justify">
                                           <div class="row">
                                             <div class="col-md-4">
-                                              <img src="{{asset('storage/assets/images/articles')}}/{{$article->image}}" width="100%"/>
+                                              <img src="{{asset('uploads/articles')}}/{{$article->image}}" width="100%"/>
                                             </div>
                                             <div class="col-md-8 text-justify">
                                               {{$article->description}}
@@ -215,7 +215,7 @@
                             @foreach($articlespublish as $article)
                             <tr>
                                 <td>{{$article->id}}</td>
-                                <td><img src="{{asset('storage/assets/images/articles')}}/{{$article->image}}" width="60"/></td>
+                                <td><img src="{{asset('uploads/articles')}}/{{$article->image}}" width="60"/></td>
                                 <td>{{$article->title}}</td>
                                 <td>{{$article->slug}}</td>
                                 <td>{{$article->description}}</td>

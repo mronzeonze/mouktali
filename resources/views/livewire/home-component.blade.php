@@ -6,7 +6,7 @@
 				<div class="col-md-6">
 					<div class="relative">
 						<a href="{{ route('article.show',['article_slug'=> $feat->slug])}}">
-							<img src="{{asset('storage/assets/images/articles')}}/{{$feat->image}}" width="700" height="500"/>
+							<img src="{{asset('uploads/articles')}}/{{$feat->image}}" width="700" height="500"/>
 						<span class="caption">{{$feat->title}}</span>
 						</a>
 					</div>
@@ -20,7 +20,7 @@
 					<div class="col-md-6">
 						<div class="relative">
 							<a href="{{ route('article.show',['article_slug'=> $feat->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$feat->image}}" width="338" height="235" />
+								<img src="{{asset('uploads/articles')}}/{{$feat->image}}" width="338" height="235" />
 								<span class="caption">{{$feat->title}}</span>
 							</a>
 						</div>
@@ -34,7 +34,7 @@
 					<div class="col-md-6">
 						<div class="relative">
 							<a href="{{ route('article.show',['article_slug'=> $feat->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$feat->image}}"  width="338" height="235" />
+								<img src="{{asset('uploads/articles')}}/{{$feat->image}}"  width="338" height="235" />
 								<span class="caption">{{$feat->title}}</span>
 							</a>
 						</div>
@@ -63,7 +63,7 @@
 				<div class="col-md-6">
 					@if($key == 0)
 						<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-						<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" style="margin-bottom:15px;" /></a>
+						<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" style="margin-bottom:15px;" /></a>
 						<p align="justify">{!! substr($art->description,0,300) !!}</p>
 						<a href="{{route('article.show',['article_slug'=> $art->slug])}}">Voir plus...</a>
 					@endif
@@ -76,7 +76,7 @@
 							<div class="col-md-4">
 								<div class="row">
 									<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-									<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" /></a>
+									<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" /></a>
 								</div>
 							</div>
 							<div class="col-md-8">
@@ -98,7 +98,7 @@
 						<h3 style="border-bottom:3px solid #1abc9c; padding-bottom:5px;"><span style="padding:6px 12px; background:#1abc9c;">{{$art->category->title}}</span></h3>
 					@endif
 					<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-					<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}"  width="100%" /></a>	
+					<img src="{{asset('uploads/articles')}}/{{$art->image}}"  width="100%" /></a>	
 				@endforeach
 			</div>
 			{{-- fin societe --}}
@@ -111,7 +111,7 @@
 							@if($key == 0)
 								<h3 style="border-bottom:3px solid #1abc9c; padding-bottom:5px;"><span style="padding:6px 12px; background:#1abc9c;">{{$art->category->title}}</span></h3>
 								<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}"  width="100%" height="230" style="margin-bottom:15px;"/></a>
+								<img src="{{asset('uploads/articles')}}/{{$art->image}}"  width="100%" height="230" style="margin-bottom:15px;"/></a>
 								<p align="justify">{!!substr($art->title,0,300)!!} <a href="{{route('article.show',['article_slug'=> $art->slug])}}">Voir plus ...</a></p>	
 							@endif
 							@endforeach
@@ -125,7 +125,7 @@
 							<div class="col-md-4">
 								<div class="row fashion">
 									<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-										<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" />
+										<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" />
 									</a>
 								</div>
 							</div>
@@ -146,7 +146,7 @@
 							@if($key == 0)
 							<h3 style="border-bottom:3px solid #1abc9c; padding-bottom:5px;"><span style="padding:6px 12px; background:#1abc9c;">{{$art->category->title}}</span></h3>
 								<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}"  width="100%" height="230" style="margin-bottom:15px;"/></a>
+								<img src="{{asset('uploads/articles')}}/{{$art->image}}"  width="100%" height="230" style="margin-bottom:15px;"/></a>
 								<p align="justify">{!!substr($art->title,0,300)!!} <a href="{{route('article.show',['article_slug'=> $art->slug])}}">Voir plus ...</a></p>
 							@endif
 							@endforeach
@@ -157,7 +157,7 @@
 							<div class="col-md-4">
 								<div class="row fashion">
 									<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-										<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}"  width="100%" />
+										<img src="{{asset('uploads/articles')}}/{{$art->image}}"  width="100%" />
 									</a>
 								</div>
 							</div>
@@ -186,7 +186,7 @@
 						<div class="col-md-6">
 							@if($key == 0)
 								<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" style="margin-bottom:15px;" /></a>
+								<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" style="margin-bottom:15px;" /></a>
 								<p align="justify">{{substr($art->description,0,300)}}</p>
 								<a href="{{route('article.show',['article_slug'=> $art->slug])}}">Voir plus...</a>
 							@endif
@@ -199,7 +199,7 @@
 									<div class="col-md-4">
 										<div class="row">
 											<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-											<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" /></a>
+											<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" /></a>
 										</div>
 									</div>
 									<div class="col-md-8">
@@ -227,7 +227,7 @@
 						<div class="col-md-6">
 							@if($key == 0)
 								<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" style="margin-bottom:15px;" /></a>
+								<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" style="margin-bottom:15px;" /></a>
 								<p align="justify">{!!substr($art->description,0,300)!!}</p>
 								<a href="{{route('article.show',['article_slug'=> $art->slug])}}">Voir plus...</a>
 							@endif
@@ -240,7 +240,7 @@
 									<div class="col-md-4">
 										<div class="row">
 											<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-											<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" /></a>
+											<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" /></a>
 										</div>
 									</div>
 									<div class="col-md-8">

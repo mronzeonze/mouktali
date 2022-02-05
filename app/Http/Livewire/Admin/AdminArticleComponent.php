@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Article;
 use Livewire\Component;
+use Illuminate\Support\Facades\File;
 use Livewire\WithPagination;
 
 class AdminArticleComponent extends Component
@@ -20,7 +21,8 @@ class AdminArticleComponent extends Component
         $article = Article::find($id);
         if($article->image)
         {
-            unlink('storage/assets/images/articles'.'/'.$article->image);
+            $destination_path = 'uploads/articles'.'/'.$article->image;
+            File::delete($destination_path);
         }
         $article->delete();
         session()->flash('message','Article a été supprimée avec succé');

@@ -28,7 +28,7 @@
 		</table> --}}
 		
 		{{-- logo site --}}
-		<img src="{{asset('storage/assets/images/logos/logomouktali1.png')}}" height="70"/>
+		<img src="{{asset('uploads/logos/logomouktali1.png')}}" height="70"/>
     </div>
     <div class="col-md-8">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -45,7 +45,7 @@
 				@foreach($bannieres as $key => $banniere)
 					<div class="item {{($key==1) ?'active':''}}" style="height: 100px !important">
 						<a href="$banniere->url">
-						<img src="{{asset('storage/assets/images/annonces')}}/{{$banniere->image}}">
+						<img src="{{asset('uploads/annonces')}}/{{$banniere->image}}">
 					</div>	
 				@endforeach
 				@endif

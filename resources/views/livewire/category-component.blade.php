@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-md-12">
                         <a href="{{route('article.show',['article_slug'=> $article->slug])}}">
-                            <img src="{{asset('storage/assets/images/articles') }}/{{$article->image}}" width="100%" style="margin-bottom:15px;" />
+                            <img src="{{asset('uploads/articles') }}/{{$article->image}}" width="100%" style="margin-bottom:15px;" />
                         </a>
                         <h3 class="articleTitle">{{ $article->title }}</h3>
                         <p align="justify">{{substr($article->description,0,300)}} <a href="{{route('article.show',['article_slug'=> $article->slug])}}">Voir plus ...</a></p><br>
@@ -21,7 +21,7 @@
                     @if($key > 0)
                         <div class="col-md-6">
                             <a href="{{route('article.show',['article_slug'=> $article->slug])}}">
-                                <img src="{{asset('storage/assets/images/articles') }}/{{$article->image}}" width="450" height="300" style="margin-bottom:15px;" />
+                                <img src="{{asset('uploads/articles') }}/{{$article->image}}" width="450" height="300" style="margin-bottom:15px;" />
                             </a>
                             <h3 class="articleTitle">{{ substr($article->title,0,50) }}</h3>
                             <p align="justify">{{substr($article->description,0,200)}} <a href="{{route('article.show',['article_slug'=> $article->slug])}}">Voir plus ...</a></p>

@@ -6,6 +6,7 @@ use App\Models\Annonces;
 use Livewire\Component;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use Livewire\WithFileUploads;
 
 class AdminEditAnnonceComponent extends Component
@@ -67,10 +68,10 @@ class AdminEditAnnonceComponent extends Component
         $annonce->location = $this->location;
         if($this->newimage)
         {
-            $destination_path = "public/assets/images/annonces";
-            unlink('storage/assets/images/annonces'.'/'.$annonce->image);
-            $imageName = Carbon::now()->timestamp. '.' . $this->newimage->extension();
-            $this->newimage->storeAs($destination_path,$imageName);
+            $destination_path = 'uploads/annonces'.'/'.$annonce->image;
+            File::delete($destination_path);
+            $imageName = Carbon::now()->timestamp;
+            $this->newimage->storeAs('annonces',$imageName,'public_uploads');
             $annonce->image = $imageName;
         }
 

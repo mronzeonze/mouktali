@@ -51,7 +51,7 @@
                                 <tr>
                                     <td><input type="checkbox" {{($article->featured)?'checked="true"':''}} wire:click="featured({{$article->id}})"></td>
                                     <td>{{$article->id}}</td>
-                                    <td><img src="{{asset('storage/assets/images/articles')}}/{{$article->image}}" width="60"/></td>
+                                    <td><img src="{{asset('uploads/articles')}}/{{$article->image}}" width="60"/></td>
                                     <td class="text-justify">{{$article->title}}</td>
                                     <td class="text-justify">{{substr($article->description,0,400)}} <a href="#expand{{$article->id}}" data-toggle="modal"> Développer</a></td>
                                     <td>{{$article->category->title}}</td>

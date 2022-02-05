@@ -53,9 +53,8 @@ class AdminAddArticleComponent extends Component
         $article->description = $this->description;
         $article->status = $this->status;
         $article->category_id = $this->category_id;
-        $destination_path = "public/assets/images/articles";
-        $imageName = Carbon::now()->timestamp. '.' . $this->image->extension();
-        $this->image->storeAs($destination_path,$imageName);
+        $imageName = Carbon::now()->timestamp;
+        $this->image->storeAs('articles',$imageName,'public_uploads');
         $article->image = $imageName;
 
         $article->save();

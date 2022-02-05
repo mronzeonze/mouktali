@@ -45,7 +45,7 @@
 							</h3>
 						</div>
                     <h1 class="articleTitle">{{ $article->title }}</h1>
-                    <img src="{{asset('storage/assets/images/articles') }}/{{$article->image}}" width="100%" style="margin-bottom:15px;" />
+                    <img src="{{asset('uploads/articles') }}/{{$article->image}}" width="100%" style="margin-bottom:15px;" />
                     <p align="justify">{{ $article->description }}</p><br>
                 </div>	
                 {{-- btn partager --}}
@@ -81,7 +81,7 @@
                     @foreach($related->take(6) as $key => $rel)
                         <div class="col-md-4">
                             <a href="{{route('article.show',['article_slug'=> $rel->slug])}}">
-                            <img src="{{asset('storage/assets/images/articles') }}/{{$rel->image}}" width="300" height="200" style="margin-bottom:15px;" /></a>
+                            <img src="{{asset('uploads/articles') }}/{{$rel->image}}" width="300" height="200" style="margin-bottom:15px;" /></a>
                             <h3 class="articleTitle">{{ substr($rel->title,0,50) }}</h3>
                             <p align="justify">{!! substr($rel->description,0,100) !!} <a href="{{route('article.show',['article_slug'=> $rel->slug])}}">Voir plus ...</a></p><br>
                         </div>   
@@ -98,7 +98,7 @@
                         @foreach($comments as $key => $comment)
                         <div class="col-md-12" style="border-bottom:1px solid #ccc; padding:10px;">
                             <div class="col-md-2">
-                                <img src="{{asset('storage/assets/images/comments/comment.png') }}" style="width:70px; border-radius:50%;" alt=""><br>
+                                <img src="{{asset('uploads/comments/comment.png') }}" style="width:70px; border-radius:50%;" alt=""><br>
                                 {{-- formatting date --}}
                                 @php
                                     setlocale(LC_TIME, 'French');

@@ -1,8 +1,8 @@
 <div class="col-md-12 bottom">
     <div class="col-md-4">
         <h3 style="border-bottom:2px solid #ccc;"><span style="border-bottom:2px solid #1abc9c;">A PROPOS DE NOUS</span></h3>
-        <img src="{{asset('assets/images/book-icon.png') }}"  width="40" align="left" />
-        {{-- <img src="{{asset('storage/assets/images/logos/logomouktali1.png')}}" height="70"/> --}}
+        <img src="{{asset('uploads/socials/book-icon.png') }}"  width="40" align="left" />
+        {{-- <img src="{{asset('storage/uploads/socials/logos/logomouktali1.png')}}" height="70"/> --}}
         <span class="name"><font color="#1abc9c">MOU</font><font color="#fff">KTALI</font></span>
         <p align="justify">{{($setting)?$setting->about:''}}</p>
     </div>
@@ -33,10 +33,10 @@
         <span class="name"><font color="#1abc9c">MOU</font><font color="#fff">KTALI</font></span><br />
         Suivez nous sur:<br /><br />
         @if($setting)
-            <a href="{{$setting->facebook}}"><img src="{{asset('assets/images/icon-fb.png') }}" /></a>
-            <a href="{{$setting->twiter}}"><img src="{{asset('assets/images/icon-twitter.png') }}" /></a>
-            <a href="#"><img src="{{asset('assets/images/icon-google.png') }}" /></a>
-            <a href="{{$setting->instagram}}"><img src="{{asset('assets/images/icon-insta.png') }}" /></a>
+            <a href="{{$setting->facebook}}"><img src="{{asset('uploads/socials/icon-fb.png') }}" /></a>
+            <a href="{{$setting->twiter}}"><img src="{{asset('uploads/socials/icon-twitter.png') }}" /></a>
+            <a href="#"><img src="{{asset('uploads/socials/icon-google.png') }}" /></a>
+            <a href="{{$setting->instagram}}"><img src="{{asset('uploads/socials/icon-insta.png') }}" /></a>
             <a href="#top" class="goto"><span class="glyphicon glyphicon-chevron-up"></span></a>
         @endif
     </div>

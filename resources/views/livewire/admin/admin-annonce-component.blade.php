@@ -50,7 +50,7 @@
                                 <tr>
                                     <td><input type="checkbox" {{($annonce->status)?'checked="true"':''}} wire:click="annonce({{$annonce->id}})"></td>
                                     <td>{{$annonce->id}}</td>
-                                    <td><img src="{{asset('storage/assets/images/annonces')}}/{{$annonce->image}}" width="60"/></td>
+                                    <td><img src="{{asset('uploads/annonces')}}/{{$annonce->image}}" width="60"/></td>
                                     <td>{{$annonce->title}}</td>
                                     <td>{{$annonce->url}}</td>
                                     <td>{{$annonce->location}}</td>

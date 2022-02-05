@@ -12,7 +12,7 @@
 					<div class="col-md-4">
 						<div class="row">
 							<a href="{{route('article.show',['article_slug'=> $art->slug])}}">
-								<img src="{{asset('storage/assets/images/articles')}}/{{$art->image}}" width="100%" style="margin-left:-15px;" />
+								<img src="{{asset('uploads/articles')}}/{{$art->image}}" width="100%" style="margin-left:-15px;" />
 							</a>
 						</div>
 					</div>
@@ -27,7 +27,7 @@
 				<div class="col-md-12 text-center" style="padding:30px 0px;">
 					@if ($annoncerightseul)
 					<a href="{{$annoncerightseul->url}}">
-						<img src="{{asset('storage/assets/images/annonces')}}/{{$annoncerightseul->image}}" />
+						<img src="{{asset('uploads/annonces')}}/{{$annoncerightseul->image}}" />
 					</a>
 					@endif
 				</div>    
@@ -39,7 +39,7 @@
 					@foreach($annonces as $key=>$annonce)
 					@if($key == 0)	
 					<a href="{{$annonce->url}}">
-						<img src="{{asset('storage/assets/images/annonces')}}/{{$annonce->image}}" width="100%" style="margin-bottom:15px;" />
+						<img src="{{asset('uploads/annonces')}}/{{$annonce->image}}" width="100%" style="margin-bottom:15px;" />
 					</a>
 					@endif
 					@endforeach
@@ -50,7 +50,7 @@
 					<div class="col-md-4">
 						<div class="row">
 							<a href="{{$annonce->url}}">
-								<img src="{{asset('storage/assets/images/annonces')}}/{{$annonce->image}}" width="100%" style="margin-left:-15px;" />
+								<img src="{{asset('uploads/annonces')}}/{{$annonce->image}}" width="100%" style="margin-left:-15px;" />
 							</a>
 						</div>
 					</div>
@@ -83,7 +83,7 @@
 							@foreach($republiques as $key => $republique)
 								<div class="item {{($key==1) ?'active':''}}" style="height: 250px !important">
 									<a href="{{route('article.show',['article_slug'=> $republique->slug])}}">
-									<img src="{{asset('storage/assets/images/articles')}}/{{$republique->image}}">
+									<img src="{{asset('uploads/articles')}}/{{$republique->image}}">
 									<span class="caption-adv" style="color:#fff;">{{$republique->title}}</span></a>
 								</div>	
 							@endforeach

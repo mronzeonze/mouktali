@@ -68,7 +68,7 @@
                                     @if($newimage)
                                         <img class="mt-4" src="{{ $newimage->temporaryUrl() }}" width="120" />
                                     @else
-                                        <img class="mt-4" src = "{{asset('storage/assets/images/articles')}}/{{$image}}" width="120" />
+                                        <img class="mt-4" src = "{{asset('uploads/articles')}}/{{$image}}" width="120" />
                                     @endif
                                     @error('image') <p class="text-danger">{{$message}}</p> @enderror
                                 </div>
